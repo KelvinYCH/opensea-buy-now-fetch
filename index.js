@@ -12,7 +12,7 @@ let result = [];
  
 var c = new Crawler({
     maxConnections : 1,
-    rateLimit: 1000,
+    rateLimit: 2000,
     jQuery:false,
     callback : function (error, res, done) {
         if(error){
