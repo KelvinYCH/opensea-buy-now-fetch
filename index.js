@@ -11,7 +11,7 @@ let token = [];
 let result = [];
  
 var c = new Crawler({
-    maxConnections : 3,
+    maxConnections : 1,
     rateLimit: 1000,
     jQuery:false,
     callback : function (error, res, done) {
@@ -20,7 +20,7 @@ var c = new Crawler({
         }else{
             let json = JSON.parse(res.body);
             if(json.detail){
-                console.log("error : " + json.detail);
+                //console.log("error : " + json.detail);
                 console.log("retrying");
                 console.log(res.options.uri);
                 c.queue(res.options.uri);
